@@ -86,7 +86,7 @@ def compute_bc_loss(model, t_bc):
     
     return loss_bc
 
-# AAS-HGR samplingof collocation points
+# AAS-HGR sampling of collocation points
 def sample_points_exp_res_grad_hess(model, t_x_matrix, num_samples):
 
     k = 1.0
