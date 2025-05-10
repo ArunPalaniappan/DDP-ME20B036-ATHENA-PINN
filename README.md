@@ -59,6 +59,4 @@ Run the model
 ```bash
 python src/ATHENA-PINN-Allen-Cahn.py
  ```
-## Acknowledgements
-
-This work was carried out under the guidance of Prof. Balaji Srinivasan, Department of Data Science and Artificial Intelligence, Indian Institute of Technology Madras.
+The End
