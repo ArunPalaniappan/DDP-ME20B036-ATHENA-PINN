@@ -22,8 +22,8 @@ Plots of the heatmaps of PINN Prediction, True Numerical Solution, and Error
 | Model        | PINN Prediction | True Numerical Solution | Error |
 | ------------ | --------------- | ------------------------ | ----- |
 | Allen-Cahn   | <img src="plots/M4-pinn.png" width="200"/> | <img src="plots/numerical.png" width="200"/> | <img src="plots/M4-error.png" width="200"/> |
-| Helmholtz    | <img src="plots/Helm-pinn.png" width="200"/> | <img src="plots/Helm-numerical.png" width="200"/> | <img src="plots/Helm-error.png" width="200"/> |
 | Klein-Gordon | <img src="plots/Klein-pinn.png" width="200"/> | <img src="plots/Klein-numerical.png" width="200"/> | <img src="plots/Klein-error.png" width="200"/> |
+| Helmholtz    | <img src="plots/Helm-pinn.png" width="200"/> | <img src="plots/Helm-numerical.png" width="200"/> | <img src="plots/Helm-error.png" width="200"/> |
 | Burgers      | <img src="plots/Burger-pinn.png" width="200"/> | <img src="plots/Burger-numerical.png" width="200"/> | <img src="plots/Burger-error.png" width="200"/> |
 
 Here are the L2 Test loss values:
