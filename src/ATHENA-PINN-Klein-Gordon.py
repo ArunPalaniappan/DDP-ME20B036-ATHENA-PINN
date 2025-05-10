@@ -5,16 +5,12 @@ import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
-
 import visdom
 import vaex
 from assimulo.solvers import ExplicitEuler
 import sys
 import os
-
-# Add the parent directory of 'optimizer' to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'optimizer')))
-
 from newton_cg import NewtonCG
 
 # Define the neural network for u(t,x)
