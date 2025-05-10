@@ -111,9 +111,9 @@ def sample_points_exp_res_grad_hess(model, t_x_matrix, num_samples):
     Gn = normalize01(G)
     Hn = normalize01(H)
 
-    beta_R = 0.6
-    beta_G = 0.3
-    beta_H = 0.1
+    beta_R = 0.5
+    beta_G = 0.2
+    beta_H = 0.3
 
     scores = beta_R * Rn + beta_G * Gn + beta_H * Hn
     
