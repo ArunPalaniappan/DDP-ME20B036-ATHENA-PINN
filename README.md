@@ -17,7 +17,7 @@ This work proposes and evaluates novel strategies to improve the accuracy, conve
 
 ## Results
 
-Plots of the heatmaps of PINN Prediction, True Numerical Solution and Error
+Plots of the heatmaps of PINN Prediction, True Numerical Solution, and Error
 
 | Model        | PINN Prediction | True Numerical Solution | Error |
 | ------------ | --------------- | ------------------------ | ----- |
@@ -37,13 +37,28 @@ Here are the L2 Test loss values:
 
 ### Repository Structure
 
-
+```
 ├── optimizers/             -> Implementations of 2nd order optimizer  
 ├── plots/                  -> Output heatmaps and figures  
 ├── src/                    -> PINN models    
 ├── .gitignore           
 ├── requirements.txt    
-└── README.md    
+└── README.md 
+```
 
-      
+### Running on local device
 
+Setup the environment
+```bash
+git clone https://github.com/ArunPalaniappan/DDP-ME20B036-ATHENA-PINN.git
+cd DDP-ME20B036-ATHENA-PINN
+pip install -r requirements.txt
+ ```
+
+Run the model
+```bash
+python src/ATHENA-PINN-Allen-Cahn.py
+ ```
+## Acknowledgements
+
+This work was carried out under the guidance of Prof. Balaji Srinivasan, Department of Data Science and Artificial Intelligence, IIT Madras.
