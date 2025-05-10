@@ -77,7 +77,7 @@ def compute_bc_loss(model, t_bc):
     loss_bc = torch.mean((u_left - u_right) ** 2) + torch.mean((u_x_left - u_x_right) ** 2)
     return loss_bc
 
-# AAS-HGR samplingof collocation points
+# AAS-HGR sampling of collocation points
 def sample_points_exp_res_grad_hess(model, t_x_matrix, num_samples):
 
     Z = t_x_matrix.clone().detach().requires_grad_(True) 
