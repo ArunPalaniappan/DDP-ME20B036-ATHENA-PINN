@@ -178,13 +178,13 @@ x_ic = (2 * torch.rand(N_ic, 1, dtype=torch.float32) - 1)
 
 # Define time intervals for the time-adaptive approach
 time_intervals = [-0.9, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-max_iterations_per_interval = 10
+max_iterations_per_interval = 15000
 loss_threshold = 1e-5
 
 # Triangular sampling schedule
 
 epochs = 15000          
-sampling_step = 50
+sampling_step = 500
 triangle_cycle_epochs = 3000
 gap_epochs = 1000
 active_sampling_epochs = triangle_cycle_epochs
@@ -259,7 +259,7 @@ for i, t_max in enumerate(time_intervals):
     
     # LBFGS fine-tuning for each time interval
     print(f"\nStarting L-BFGS fine-tuning for time interval [-1.0, {t_max}]...")
-    optimizer_lbfgs = optim.LBFGS(model.parameters(), lr=1, max_iter=30, 
+    optimizer_lbfgs = optim.LBFGS(model.parameters(), lr=1, max_iter=3000, 
                                  history_size=50, line_search_fn="strong_wolfe")
     
     def closure():
@@ -275,7 +275,7 @@ for i, t_max in enumerate(time_intervals):
     print(f"L-BFGS fine-tuning complete for time interval [-1.0, {t_max}]")
 
 # Final Newton-CG Fine-tuning 
-optimizer_newton = NewtonCG(model.parameters(), lr=1, rank=10, mu=1e-6, cg_tol=1e-10, cg_max_iters=10, line_search_fn="armijo")
+optimizer_newton = NewtonCG(model.parameters(), lr=1, rank=10, mu=1e-6, cg_tol=1e-10, cg_max_iters=1000, line_search_fn="armijo")
 
 def newton_closure():
     optimizer_newton.zero_grad()
