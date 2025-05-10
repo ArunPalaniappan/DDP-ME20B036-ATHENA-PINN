@@ -163,7 +163,7 @@ loss_threshold = 1e-5
 
 # Triangular sampling schedule
 
-epochs = 15000          
+epochs = max_iterations_per_interval          
 sampling_step = 500
 triangle_cycle_epochs = 3000
 gap_epochs = 1000
